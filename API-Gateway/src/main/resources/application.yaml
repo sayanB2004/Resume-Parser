@@ -1,22 +1,19 @@
 spring:
   application:
-    name: API-Gateway
-    cloud:
-      gateway:
-        routes:
-          - id: resume-service
-            uri: lb://RESUME-SERVICE
-            predicates:
-              - Path=/api/resumes/**
+    name: api-gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: resume-service
+          uri: lb://RESUME-SERVICE
+          predicates:
+            - Path=/api/resumes/**
+
+server:
+  port: 8080
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
-
-
-server:
-    port: 8080
-
-
-
+      defaultZone: http://eureka-server:8761/eureka/

@@ -81,12 +81,13 @@ public class ResumeController {
         Map<String, Object> result = new HashMap<>();
         result.put("id", resume.getId());
         result.put("status", resume.getStatus());
+        result.put("data", resume.getRawText());
 
-        if (resume.getParsedJson() != null) {
-            result.put("data", objectMapper.readValue(resume.getParsedJson(), Map.class));
-        } else {
-            result.put("data", null);
-        }
+//        if (resume.getParsedJson() != null) {
+//            result.put("data", objectMapper.readValue(resume.getParsedJson(), Map.class));
+//        } else {
+//            result.put("data", null);
+//        }
 
         return result;
     }

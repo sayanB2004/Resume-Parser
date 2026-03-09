@@ -1,6 +1,9 @@
 spring:
+  application:
+    name: resume-service
+
   datasource:
-    url: jdbc:postgresql://localhost:5433/resumedb
+    url: jdbc:postgresql://postgres:5432/resumedb
     username: postgres
     password: postgres
 
@@ -11,7 +14,7 @@ spring:
       hibernate.jdbc.time_zone: Asia/Kolkata
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
 
 server:
   port: 8081
@@ -19,4 +22,4 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/

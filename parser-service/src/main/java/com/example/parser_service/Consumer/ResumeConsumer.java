@@ -48,9 +48,11 @@ public class ResumeConsumer {
             // Send parsed JSON to resume-service via REST API
             HttpEntity<String> request = new HttpEntity<>(objectMapper.writeValueAsString(parsedJson));
             restTemplate.put(
-                    "http://localhost:8081/api/resumes/" + resumeId,
+                    "http://resume-service:8081/api/resumes/" + resumeId,
                     request
             );
+
+
 
             System.out.println("Resume updated successfully! resumeId=" + resumeId);
 
