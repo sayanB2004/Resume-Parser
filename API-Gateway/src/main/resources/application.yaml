@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: API-Gateway
+    cloud:
+      gateway:
+        routes:
+          - id: resume-service
+            uri: lb://RESUME-SERVICE
+            predicates:
+              - Path=/api/resumes/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+server:
+    port: 8080
+
+
+

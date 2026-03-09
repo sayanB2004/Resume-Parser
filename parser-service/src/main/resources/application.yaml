@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: parser-service
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      group-id: parser-group-3
+
+
+server:
+  port: 8082
+
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
