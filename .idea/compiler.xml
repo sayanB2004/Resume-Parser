@@ -10,9 +10,11 @@
         <module name="resume-service" />
         <module name="API-Gateway" />
         <module name="eureka-server" />
-        <module name="parser-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="parser-service" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

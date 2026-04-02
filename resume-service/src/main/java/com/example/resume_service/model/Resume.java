@@ -18,4 +18,8 @@ public class Resume {
     private String parsedJson;
 
     private String status;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }

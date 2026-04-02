@@ -24,7 +24,6 @@
         <module>eureka-server</module>
         <module>API-Gateway</module>
         <module>resume-service</module>
-        <module>parser-service</module>
     </modules>
 
     <properties>

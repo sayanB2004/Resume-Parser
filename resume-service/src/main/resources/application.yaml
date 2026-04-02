@@ -11,10 +11,9 @@ spring:
     hibernate:
       ddl-auto: update
     properties:
-      hibernate.jdbc.time_zone: Asia/Kolkata
-
-  kafka:
-    bootstrap-servers: kafka:9092
+      hibernate:
+        jdbc:
+          time_zone: Asia/Kolkata
 
 server:
   port: 8081
@@ -23,3 +22,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-server:8761/eureka/
+
+fastapi:
+  url: ${FASTAPI_URL:http://host.docker.internal:8000}
